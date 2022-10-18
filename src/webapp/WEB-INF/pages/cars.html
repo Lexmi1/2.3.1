@@ -13,7 +13,7 @@
             <th>Series</th>
             <th>Manufacturer</th>
         </tr>
-        <tr th:each="car : ${resultCarList}">
+        <tr th:each="car : ${carList}">
             <td th:utext="${car.model}"></td>
             <td th:utext="${car.series}"></td>
             <td th:utext="${car.manufacturer}"></td>
