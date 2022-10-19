@@ -25,7 +25,6 @@ public class CarServiceImp implements CarService {
 
     @Override
     public List<Car> getCar(int kol) {
-
         if (kol >= 5) {
             return carList;
         } else {
