@@ -30,6 +30,7 @@ public class UserServiceImp implements UserService {
         Optional<User> user = usersRepository.findById(id);
         return user.orElse(null);
     }
+
     @Transactional
     @Override
     public void save(User user) {

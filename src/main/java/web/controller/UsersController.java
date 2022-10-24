@@ -20,9 +20,7 @@ public class UsersController {
 
     @GetMapping()
     public String getUsers(Model model) {
-
         model.addAttribute("userList", userService.getUsers());
-
         return "users";
     }
 
@@ -44,17 +42,15 @@ public class UsersController {
 
     @PatchMapping("/update")
     public String update(@RequestParam("userId") int id, Model model) {
-
         model.addAttribute("user", userService.getUser(id));
+
         return "newUser";
     }
 
     @DeleteMapping("/delete")
     public String delete(@RequestParam("userId") int id) {
-
         userService.delete(id);
 
         return "redirect:/users";
     }
-
 }
